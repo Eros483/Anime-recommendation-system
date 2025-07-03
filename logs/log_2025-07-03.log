@@ -1,0 +1,52 @@
+2025-07-03 21:06:52,002-INFO-ModelTraining initialized with data path: artifacts/processed
+2025-07-03 21:06:52,075-INFO-Data loaded successfully from artifacts/processed
+2025-07-03 21:06:52,122-INFO-Succesfully read YAML file
+2025-07-03 21:06:52,122-INFO-Configuration loaded successfully
+2025-07-03 21:06:52,284-INFO-RecommenderNet model created successfully
+2025-07-03 21:06:52,284-INFO-Model created successfully
+2025-07-03 21:07:51,316-INFO-Model trained successfully
+2025-07-03 21:07:51,317-WARNING-You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-07-03 21:07:51,423-INFO-Model saved successfully at artifacts/model\model.h5
+2025-07-03 21:07:51,429-INFO-Weights extracted successfully from layer user_embedding
+2025-07-03 21:07:51,452-INFO-Weights extracted successfully from layer anime_embedding
+2025-07-03 21:07:51,467-INFO-User and anime weights succesfully saved.
+2025-07-03 21:07:51,468-INFO-Model saved succesfully
+2025-07-03 21:19:43,664-INFO-COMET ML Initialised and ModelTraining initialized with data path: artifacts/processed
+2025-07-03 21:19:43,732-INFO-Data loaded successfully from artifacts/processed
+2025-07-03 21:19:43,804-INFO-Succesfully read YAML file
+2025-07-03 21:19:43,804-INFO-Configuration loaded successfully
+2025-07-03 21:19:45,505-INFO-RecommenderNet model created successfully
+2025-07-03 21:19:45,506-INFO-Model created successfully
+2025-07-03 21:20:33,431-INFO-Model trained successfully
+2025-07-03 21:20:33,432-WARNING-You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-07-03 21:20:33,526-INFO-Model saved successfully at artifacts/model\model.h5
+2025-07-03 21:20:33,530-INFO-Weights extracted successfully from layer user_embedding
+2025-07-03 21:20:33,543-INFO-Weights extracted successfully from layer anime_embedding
+2025-07-03 21:20:33,644-INFO-User and anime weights succesfully saved.
+2025-07-03 21:20:33,645-INFO-Model saved succesfully
+2025-07-03 21:28:58,393-INFO-Data Processing Initialized
+2025-07-03 21:29:00,153-INFO-Data loaded successfully from artifacts/raw/animelist.csv
+2025-07-03 21:29:00,486-INFO-Filtered users with at least 400 ratings. Remaining users: 4203
+2025-07-03 21:29:02,550-INFO-Ratings scaled successfully.
+2025-07-03 21:29:02,821-INFO-Data encoded successfully.
+2025-07-03 21:29:03,832-INFO-Data split into train and test sets. Train size: 3245641, Test size: 1000
+2025-07-03 21:29:03,851-INFO-Saved user2user_encoded to artifacts/processed
+2025-07-03 21:29:03,871-INFO-Saved user2user_decoded to artifacts/processed
+2025-07-03 21:29:03,939-INFO-Saved anime2anime_encoded to artifacts/processed
+2025-07-03 21:29:04,018-INFO-Saved anime2anime_decoded to artifacts/processed
+2025-07-03 21:29:11,966-INFO-All artifacts saved successfully...
+2025-07-03 21:29:19,821-INFO-DF and synopsis_df saved successfully.
+2025-07-03 21:29:19,825-INFO-Data processing pipeline completed successfully.
+2025-07-03 21:29:27,678-INFO-COMET ML Initialised and ModelTraining initialized with data path: artifacts/processed
+2025-07-03 21:29:27,835-INFO-Data loaded successfully from artifacts/processed
+2025-07-03 21:29:27,904-INFO-Succesfully read YAML file
+2025-07-03 21:29:27,904-INFO-Configuration loaded successfully
+2025-07-03 21:29:28,061-INFO-RecommenderNet model created successfully
+2025-07-03 21:29:28,062-INFO-Model created successfully
+2025-07-03 21:30:44,288-INFO-Model trained successfully
+2025-07-03 21:30:44,290-WARNING-You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-07-03 21:30:44,387-INFO-Model saved successfully at artifacts/model\model.h5
+2025-07-03 21:30:44,393-INFO-Weights extracted successfully from layer user_embedding
+2025-07-03 21:30:44,409-INFO-Weights extracted successfully from layer anime_embedding
+2025-07-03 21:30:44,518-INFO-User and anime weights succesfully saved.
+2025-07-03 21:30:44,520-INFO-Model saved succesfully
