@@ -1,11 +1,13 @@
 pipeline {
     agent any
 
-    stages("Cloning from github..."){
-        steps{
-            script{
-                echo 'Cloning from github'
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-token', url: 'https://github.com/Eros483/Anime-recommendation-system.git']])
+    stages{
+        stage("Cloning from github..."){
+            steps{
+                script{
+                    echo 'Cloning from github'
+                    checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-token', url: 'https://github.com/Eros483/Anime-recommendation-system.git']])
+                }
             }
         }
     }
