@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    evnironment {
+    environment  {
         VENV_DIR = 'venv'
     }
 
