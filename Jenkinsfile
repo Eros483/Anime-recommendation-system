@@ -3,6 +3,9 @@ pipeline {
 
     environment  {
         VENV_DIR = 'venv'
+        GCP_PROJECT='top-virtue-464214-m6'
+        GCLOUD_PATH='var/jenkins_home/google-cloud-sdk/bin'
+        KUBECTL_AUTH_PLUGIN='/usr/lib/google-cloud-sdk/bin'
     }
 
     stages{
@@ -38,6 +41,40 @@ pipeline {
                         sh '''
                         . ${VENV_DIR}/bin/activate
                         dvc pull
+                        '''
+                    }
+                }
+            }
+        }
+        stage("Build and push image to GCR"){
+            steps{
+                withCredentials([file(credentialsId: 'gcp-key-anime', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]){
+                    script{
+                        echo 'pushing image to gcr'
+                        sh '''
+                        export PATH=$PATH:${GCLOUD_PATH}
+                        gcloud auth activate-service-account --key-file=${GOOGLE_APPLICATION_CREDENTIALS}
+                        gcloud config set project ${GCP_PROJECT}
+                        gcloud auth configure-docker --quiet
+                        docker build -t gcr.io/${GCP_PROJECT}/ml-project:latest .
+                        docker push gcr.io/${GCP_PROJECT}/ml-project:latest
+                        '''
+                    }
+                }
+            }
+        }
+
+        stage("Deploying to kubernetes"){
+            steps{
+                withCredentials([file(credentialsId: 'gcp-key-anime', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]){
+                    script{
+                        echo 'deploying to kubernetes'
+                        sh '''
+                        export PATH=$PATH:${GCLOUD_PATH}:${KUBECTL_AUTH_PLUGIN}
+                        gcloud auth activate-service-account --key-file=${GOOGLE_APPLICATION_CREDENTIALS}
+                        gcloud config set project ${GCP_PROJECT}
+                        gcloud container clusters get-credentials ml-app-cluster --region us-central1
+                        kubectl apply -f deployment.yaml
                         '''
                     }
                 }
