@@ -3,6 +3,7 @@
 This system serves as a combination of a user-based recommendation system, wherein a user is provided recommendations, based on content consumed by similiar users, and a content-based recommendation system, wherein recommendations are draw from media similiar to anime already viewed by the user.
 
 The entire pipeline had been deployed using Jenkins for the CI/CD pipeline, and Google Kubernetes Engine as the deployed platform for the dockerized algorithm, hosted on google cloud registry.
+Utilised comet-ml for model experiment tracking.
 
 ## Installation for local usage
 ### 1. Clone the repository:
